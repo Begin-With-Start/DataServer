@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="DataServer"
+  id="myeclipse.1478608598346"
+  context-root="/DataServer"
+  j2ee-spec="5.0"
+  archive="DataServer.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+
