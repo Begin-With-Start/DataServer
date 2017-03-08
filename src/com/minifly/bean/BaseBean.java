@@ -1,5 +1,9 @@
 package com.minifly.bean;
-
+/**
+ * 基类
+ * @author xiaofei.he
+ *
+ */
 public class BaseBean {
 	
 	private String code = "0";

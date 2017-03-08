@@ -7,12 +7,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.xml.rpc.ServiceException;
 
 import org.springframework.dao.DataIntegrityViolationException;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -28,7 +27,7 @@ import com.minifly.dbutil.PhotoDbutils;
 
 @Controller
 @RequestMapping("/info")
-public class HelloControler {
+public class PersonControler {
 
 	// redirect 在Controller中使用redirect方式处理请求
 	@RequestMapping("/redirect")
@@ -59,16 +58,16 @@ public class HelloControler {
 			bean.setMsg("json转换失败");
 			bean.setCode("1");
 		}
-		return ""+bean.toString();
+		return ""+bean.toString(); 
 	}
 
 	//从数据库中查询某一个人的照片的信息
 	@RequestMapping(value = "/getPersonPhoto", produces = "application/json; charset=utf-8")
 	@ResponseBody
-	public String getPersonPhoto(@PathVariable("userId") String userId) {
+	public String getPersonPhoto(@RequestParam(value="userId")  String userId) {
 		ObjectMapper objectMapper = new ObjectMapper();
 
-		List<PhotoBean> list = PhotoDbutils.getPohoto();
+		List<PhotoBean> list = PhotoDbutils.getPohotoById(userId);
 		BaseBean bean = new BaseBean();
 		bean.setData(list);
 		
