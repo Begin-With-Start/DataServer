@@ -28,3 +28,29 @@ Spring mvc 的常用注解：
 
 　　@ControllerAdvice
 　　使一个Contoller成为全局的异常处理类，类中用@ExceptionHandler方法注解的方法可以处理所有Controller发生的异常
+
+
+接口列表：
+获取设备的信息列表：
+	http://localhost:8080/DataServer/machine/info
+	{"os_name":"Windows 7","os_arch":"amd64","os_ip":"192.168.200.95","os_mac":"70-8B-CD-B8-BF-94","os_date":1488959393537,"os_cpus":4,"os_user_name":"xiaofei.he","os_user_dir":"D:\\pc_program\\myeclipsedata\\plugins\\com.genuitec.eclipse.easie.tomcat.myeclipse_8.4.200.me201001111827\\tomcat\\bin","os_user_home":"C:\\Users\\Administrator","java_version":"1.8.0_45","java_io_tmpdir":"F:\\myeclipse_workspace\\.metadata\\.me_tcat\\temp","sun_desktop":"windows","file_separator":"\\","path_separator":";","line_separator":"\r\n","server_context":null,"server_name":null,"server_port":null,"server_addr":null,"server_host":null,"server_protocol":null}
+
+通过用户的id获取一下用户的信息：
+	http://localhost:8080/DataServer/info/getPersonPhoto?userId=523216808
+	{"code":"0","msg":"success","data":[{"image_url":"http://img.alicdn.com/imgextra/i3/523216808/TB11cm3GFXXXXa8XXXXXXXXXXXX_!!523216808-0-tstar.jpg","user_id":"523216808"},{"image_url":"http://img.alicdn.com/imgextra/i3/523216808/TB14gOWGFXXXXbhXFXXXXXXXXXX_!!523216808-0-tstar.jpg","user_id":"523216808"},{"image_url":"http://img.alicdn.com/imgextra/i2/523216808/TB1pAq0GFXXXXXXXpXXXXXXXXXX_!!523216808-0-tstar.jpg","user_id":"523216808"},{"image_url":"http://img.alicdn.com/imgextra/i4/523216808/TB1j7OVGFXXXXcxXFXXXXXXXXXX_!!523216808-0-tstar.jpg","user_id":"523216808"},{"image_url":"http://img.alicdn.com/imgextra/i3/523216808/TB1PXC1GFXXXXcKXXXXXXXXXXXX_!!523216808-0-tstar.jpg","user_id":"523216808"},{"image_url":"http://img.alicdn.com/imgextra/i1/523216808/TB1F85TGFXXXXbNXVXXXXXXXXXX_!!523216808-0-tstar.jpg","user_id":"523216808"},{"image_url":"http://img.alicdn.com/imgextra/i1/523216808/TB112QbGFXXXXbMXpXXXXXXXXXX_!!523216808-0-tstar.jpg","user_id":"523216808"},{"image_url":"http://img.alicdn.com/imgextra/i4/523216808/TB1VgIXGFXXXXX_XFXXXXXXXXXX_!!523216808-0-tstar.jpg","user_id":"523216808"},{"image_url":"http://img.alicdn.com/imgextra/i4/523216808/TB1UpAdGFXXXXXvXpXXXXXXXXXX_!!523216808-0-tstar.jpg","user_id":"523216808"},{"image_url":"http://img.alicdn.com/imgextra/i2/523216808/TB1zAv8GFXXXXccXVXXXXXXXXXX_!!523216808-0-tstar.jpg","user_id":"523216808"},{"image_url":"http://img.alicdn.com/imgextra/i2/523216808/TB17OgbGFXXXXbAXpXXXXXXXXXX_!!523216808-0-tstar.jpg","user_id":"523216808"},{"image_url":"http://img.alicdn.com/imgextra/i3/523216808/TB1wIf_GFXXXXXWXVXXXXXXXXXX_!!523216808-0-tstar.jpg","user_id":"523216808"},{"image_url":"http://img.alicdn.com/imgextra/i1/523216808/TB1r27fGFXXXXX_XXXXXXXXXXXX_!!523216808-0-tstar.jpg","user_id":"523216808"},{"image_url":"http://img.alicdn.com/imgextra/i3/523216808/TB1gCT.GFXXXXaWXFXXXXXXXXXX_!!523216808-0-tstar.jpg","user_id":"523216808"},{"image_url":"http://img.alicdn.com/imgextra/i1/523216808/TB1x9n_GFXXXXcxXFXXXXXXXXXX_!!523216808-0-tstar.jpg","user_id":"523216808"},{"image_url":"http://img.alicdn.com/imgextra/i3/523216808/TB1i1AXGFXXXXcQXpXXXXXXXXXX_!!523216808-0-tstar.jpg","user_id":"523216808"},{"image_url":"http://img.alicdn.com/imgextra/i2/523216808/TB1y6MdGFXXXXcvXXXXXXXXXXXX_!!523216808-0-tstar.jpg","user_id":"523216808"},{"image_url":"http://img.alicdn.com/imgextra/i1/523216808/TB1prIXGFXXXXX2XFXXXXXXXXXX_!!523216808-0-tstar.jpg","user_id":"523216808"},{"image_url":"http://img.alicdn.com/imgextra/i1/523216808/TB164UdGFXXXXaSXXXXXXXXXXXX_!!523216808-0-tstar.jpg","user_id":"523216808"},{"image_url":"http://img.alicdn.com/imgextra/i1/523216808/TB1_YD9GFXXXXa4XVXXXXXXXXXX_!!523216808-0-tstar.jpg","user_id":"523216808"}]}
+
+获取主页的信息：
+	http://localhost:8080/DataServer/info/getMainPage
+	{"code":"0","msg":"success","data":[{"image_url":"http://img.alicdn.com/imgextra/i2/523216808/TB17w1ZGFXXXXbbXpXXXXXXXXXX_!!523216808-0-tstar.jpg","user_id":"523216808"},{"image_url":"http://img.alicdn.com/imgextra/i1/539549300/TB1S54tIpXXXXa0XFXXXXXXXXXX_!!539549300-0-tstar.jpg","user_id":"539549300"},{"image_url":"http://img.alicdn.com/imgextra/i3/631300490/TB18otCLXXXXXbOaXXXXXXXXXXX_!!0-tstar.jpg","user_id":"631300490"},{"image_url":"http://img.alicdn.com/imgextra/i4/13008032069895178/T1MJE5FaXdXXXXXXXX_!!63153008-0-tstar.jpg","user_id":"63153008"},{"image_url":"http://img.alicdn.com/imgextra/i4/646858747/TB1y49uJVXXXXaQXpXXXXXXXXXX_!!646858747-0-tstar.jpg","user_id":"646858747"},{"image_url":"http://img.alicdn.com/imgextra/i1/687471686/TB1aIeELFXXXXcrapXXXXXXXXXX_!!0-tstar.jpg","user_id":"687471686"},{"image_url":"http://img.alicdn.com/imgextra/i3/717492986/TB1jybTLXXXXXcIaXXXXXXXXXXX_!!717492986-0-tstar.jpg","user_id":"717492986"},{"image_url":"http://img.alicdn.com/imgextra/i1/74386764/TB1tM0cGFXXXXXNXVXXXXXXXXXX_!!74386764-0-tstar.jpg","user_id":"74386764"},{"image_url":"http://img.alicdn.com/imgextra/i4/18272043535448294/T1iMGPFfViXXXXXXXX_!!76438272-0-tstar.jpg","user_id":"76438272"},{"image_url":"http://img.alicdn.com/imgextra/i2/91442126/TB1AWJAHpXXXXclXVXXXXXXXXXX_!!91442126-0-tstar.jpg","user_id":"91442126"},{"image_url":"http://img.alicdn.com/imgextra/i2/96614110/TB1urhoKXXXXXcIXXXXXXXXXXXX_!!0-tstar.jpg","user_id":"96614110"}]}
+
+
+
+
+
+
+
+
+
+
+
+
