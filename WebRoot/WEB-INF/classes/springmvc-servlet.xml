@@ -16,16 +16,12 @@
 	<!-- 服务器的编码问题 starting -->
 	<!-- 处理请求返回json字符串的中文乱码问题 -->
 	<mvc:annotation-driven>
-		<mvc:message-converters>
-			<bean class="org.springframework.http.converter.StringHttpMessageConverter">
-				<property name="supportedMediaTypes">
-					<list>
-						<value>application/json;charset=UTF-8</value>
-					</list>
-				</property>
-			</bean>
-		</mvc:message-converters>
-	</mvc:annotation-driven>
+    <mvc:message-converters register-defaults="true">
+	    <bean class="org.springframework.http.converter.StringHttpMessageConverter">
+	      <property name="supportedMediaTypes" value = "text/plain;charset=UTF-8" />
+	    </bean>
+   	</mvc:message-converters>
+    </mvc:annotation-driven>
 	<!-- 服务器的编码问题 ending -->
 
 	<!-- configure the InternalResourceViewResolver -->
