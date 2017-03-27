@@ -23,7 +23,7 @@ public class MeizhiDbutils {
 		int pageEndNum = (StringUtils.string2Int(page)+1)*20;
 		
 		String sql = "SELECT p.description,m.image_url,p.id FROM meizhi_image m,meizhi_pageurl p WHERE m.parent_id = p.id GROUP BY m.parent_id LIMIT "+pageNum+", "+pageEndNum+";";
-
+		System.out.println(""+ sql);
 		Connection conn = DBHelper.getConnection();
 		try{
 			// statement用来执行SQL语句
@@ -51,7 +51,7 @@ public class MeizhiDbutils {
 	 */
 	public static List<MeizhiImageBean> getMeizhiById(String userId) {
 		List<MeizhiImageBean> list = new LinkedList<MeizhiImageBean>();
-		String sql = "SELECT	m.image_url,p1.description FROM meizhi_image m,( SELECT p.description FROM meizhi_pageurl p WHERE p.id = "+userId+" ) p1 WHERE m.parent_id = "+userId+";";
+		String sql = "SELECT	m.parent_id,m.image_url,p1.description FROM meizhi_image m,( SELECT p.description FROM meizhi_pageurl p WHERE p.id = " +userId+ " ) p1 WHERE m.parent_id = "+userId+";";
 		System.out.println("" +sql);
 		
 		Connection conn = DBHelper.getConnection();
@@ -67,9 +67,11 @@ public class MeizhiDbutils {
 				meizhiBean.setImageUrl(rs.getString("image_url"));
 				meizhiBean.setDescription(rs.getString("description"));
 				meizhiBean.setParentId(rs.getString("parent_id"));
+				list.add(meizhiBean);
 			}
 			rs.close();
 		}catch(Exception e){
+			e.printStackTrace();
 			System.out.println("" + e.getMessage());
 		}
 		

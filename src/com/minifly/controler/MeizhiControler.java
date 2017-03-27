@@ -37,7 +37,7 @@ public class MeizhiControler {
 	}
 
 	//从数据库中查询照片的信息 将数据库中有的照片和人返回一个数组
-	@RequestMapping(value = "/getMeizhiImage", produces = "text/json;charset=UTF-8")
+	@RequestMapping(value = "/getMeizhiAlbum", produces = "text/json;charset=UTF-8")
 	@ResponseBody
 	public String getMeizhiImage(@RequestParam(value="page")  String page) {
 		ObjectMapper objectMapper = new ObjectMapper();

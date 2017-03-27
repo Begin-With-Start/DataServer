@@ -84,6 +84,7 @@ public class DBHelper {
             System.out.println("conn:"+conn);
             System.out.println("Succeeded connecting to the Database!");
         } catch (Exception e) {
+            System.out.println("链接错误了.");
             e.printStackTrace();
         }
     }
