@@ -18,6 +18,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.minifly.bean.BaseBean;
 import com.minifly.bean.MeizhiImageBean;
 import com.minifly.bean.PhotoBean;
+import com.minifly.bean.VideoBean;
 import com.minifly.dbutil.MeizhiDbutils;
 import com.minifly.dbutil.PhotoDbutils;
 /**
@@ -79,10 +80,10 @@ public class MeizhiControler {
 	//从数据库中查询某一个人的照片的信息
 	@RequestMapping(value = "/getMeizhiVideo", produces = "application/json; charset=utf-8")
 	@ResponseBody
-	public String getPersonPhoto(@RequestParam(value="userId")  String userId) {
+	public String getPersonPhoto(@RequestParam(value="page")  String page) {
 		ObjectMapper objectMapper = new ObjectMapper();
 
-		List<PhotoBean> list = PhotoDbutils.getPohotoById(userId);
+		List<VideoBean> list = MeizhiDbutils.getMeizhiVideo(page);
 		BaseBean bean = new BaseBean();
 		bean.setData(list);
 		
