@@ -23,6 +23,10 @@ public class MeizhiDbutils {
 		int pageNum = StringUtils.string2Int(page)*20;//每页给20个推荐。
 		String sql = "SELECT p.description,m.image_url,m.parent_id,m.id FROM meizhi_image m,meizhi_pageurl p WHERE m.parent_id = p.id GROUP BY m.parent_id LIMIT "+pageNum+", "+20+";";
 		System.out.println(sql);
+		int pageEndNum = (StringUtils.string2Int(page)+1)*20;
+		
+		String sql = "SELECT p.description,m.image_url,p.id FROM meizhi_image m,meizhi_pageurl p WHERE m.parent_id = p.id GROUP BY m.parent_id LIMIT "+pageNum+", "+pageEndNum+";";
+		System.out.println(""+ sql);
 		Connection conn = DBHelper.getConnection();
 		try{
 			// statement用来执行SQL语句
@@ -98,9 +102,11 @@ public class MeizhiDbutils {
 				meizhiBean.setDescription(rs.getString("description"));
 				meizhiBean.setParentId(rs.getString("parent_id"));
 				meizhiBean.setId(rs.getString("id"));
+				list.add(meizhiBean);
 			}
 			rs.close();
 		}catch(Exception e){
+			e.printStackTrace();
 			System.out.println("" + e.getMessage());
 		}
 		

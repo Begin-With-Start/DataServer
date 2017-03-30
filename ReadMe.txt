@@ -31,6 +31,7 @@ Spring mvc 的常用注解：
 
 
 接口列表：
+
 获取设备的信息列表：
 	http://localhost:8080/DataServer/machine/info
 	{"os_name":"Windows 7","os_arch":"amd64","os_ip":"192.168.200.95","os_mac":"70-8B-CD-B8-BF-94","os_date":1488959393537,"os_cpus":4,"os_user_name":"xiaofei.he","os_user_dir":"D:\\pc_program\\myeclipsedata\\plugins\\com.genuitec.eclipse.easie.tomcat.myeclipse_8.4.200.me201001111827\\tomcat\\bin","os_user_home":"C:\\Users\\Administrator","java_version":"1.8.0_45","java_io_tmpdir":"F:\\myeclipse_workspace\\.metadata\\.me_tcat\\temp","sun_desktop":"windows","file_separator":"\\","path_separator":";","line_separator":"\r\n","server_context":null,"server_name":null,"server_port":null,"server_addr":null,"server_host":null,"server_protocol":null}
@@ -43,6 +44,7 @@ Spring mvc 的常用注解：
 	http://localhost:8080/DataServer/info/getMainPage
 	{"code":"0","msg":"success","data":[{"image_url":"http://img.alicdn.com/imgextra/i2/523216808/TB17w1ZGFXXXXbbXpXXXXXXXXXX_!!523216808-0-tstar.jpg","user_id":"523216808"},{"image_url":"http://img.alicdn.com/imgextra/i1/539549300/TB1S54tIpXXXXa0XFXXXXXXXXXX_!!539549300-0-tstar.jpg","user_id":"539549300"},{"image_url":"http://img.alicdn.com/imgextra/i3/631300490/TB18otCLXXXXXbOaXXXXXXXXXXX_!!0-tstar.jpg","user_id":"631300490"},{"image_url":"http://img.alicdn.com/imgextra/i4/13008032069895178/T1MJE5FaXdXXXXXXXX_!!63153008-0-tstar.jpg","user_id":"63153008"},{"image_url":"http://img.alicdn.com/imgextra/i4/646858747/TB1y49uJVXXXXaQXpXXXXXXXXXX_!!646858747-0-tstar.jpg","user_id":"646858747"},{"image_url":"http://img.alicdn.com/imgextra/i1/687471686/TB1aIeELFXXXXcrapXXXXXXXXXX_!!0-tstar.jpg","user_id":"687471686"},{"image_url":"http://img.alicdn.com/imgextra/i3/717492986/TB1jybTLXXXXXcIaXXXXXXXXXXX_!!717492986-0-tstar.jpg","user_id":"717492986"},{"image_url":"http://img.alicdn.com/imgextra/i1/74386764/TB1tM0cGFXXXXXNXVXXXXXXXXXX_!!74386764-0-tstar.jpg","user_id":"74386764"},{"image_url":"http://img.alicdn.com/imgextra/i4/18272043535448294/T1iMGPFfViXXXXXXXX_!!76438272-0-tstar.jpg","user_id":"76438272"},{"image_url":"http://img.alicdn.com/imgextra/i2/91442126/TB1AWJAHpXXXXclXVXXXXXXXXXX_!!91442126-0-tstar.jpg","user_id":"91442126"},{"image_url":"http://img.alicdn.com/imgextra/i2/96614110/TB1urhoKXXXXXcIXXXXXXXXXXXX_!!0-tstar.jpg","user_id":"96614110"}]}
 
+
 获取妹纸的首页信息
 	http://localhost:8080/DataServer/meizhi/getMeizhiImage?page=1
 
@@ -52,6 +54,14 @@ Spring mvc 的常用注解：
 通过page获取video
 	http://localhost:8080/DataServer/meizhi/getMeizhiVideo?page=0
 
+=======
+	
+获取相册集的信息： (从零开始计数)
+	http://localhost:8080/DataServer/meizhi/getMeizhiAlbum?page=0
+	
+通过id获取当前的用户的照片：
+	http://localhost:8080/DataServer/meizhi/getMeizhiImageById?id=1
+	
 
 
 
