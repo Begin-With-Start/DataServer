@@ -54,7 +54,6 @@ Spring mvc 的常用注解：
 通过page获取video
 	http://localhost:8080/DataServer/meizhi/getMeizhiVideo?page=0
 
-=======
 	
 获取相册集的信息： (从零开始计数)
 	http://localhost:8080/DataServer/meizhi/getMeizhiAlbum?page=0

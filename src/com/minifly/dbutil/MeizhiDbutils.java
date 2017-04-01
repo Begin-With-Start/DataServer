@@ -7,7 +7,6 @@ import java.util.LinkedList;
 import java.util.List;
 
 import com.minifly.bean.MeizhiImageBean;
-import com.minifly.bean.PhotoBean;
 import com.minifly.bean.VideoBean;
 import com.minifly.db.DBHelper;
 import com.minifly.utils.StringUtils;
