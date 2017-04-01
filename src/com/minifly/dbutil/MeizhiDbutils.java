@@ -22,6 +22,7 @@ public class MeizhiDbutils {
 		int pageNum = StringUtils.string2Int(page)*20;//每页给20个推荐。
 		String sql = "SELECT p.description,m.image_url,m.parent_id,m.id FROM meizhi_image m,meizhi_pageurl p WHERE m.parent_id = p.id GROUP BY m.parent_id LIMIT "+pageNum+", "+20+";";
 		System.out.println(sql);
+
 		Connection conn = DBHelper.getConnection();
 		try{
 			// statement用来执行SQL语句
